@@ -6,7 +6,6 @@ const supabaseKey = process.env.SUPABASE_KEY;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 export default async function handler(req, res) {
-  // is this a new visitor
   const hashedIp = crypto
     .createHash("md5")
     .update(req.connection.remoteAddress)
